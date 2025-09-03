@@ -23,8 +23,8 @@ export const Subtitle = styled.p`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
 `;
 
 export const Card = styled.div`
@@ -38,11 +38,19 @@ export const Card = styled.div`
     transform: translateY(-6px);
     box-shadow: ${({ theme }) => theme.shadow.lg};
   }
+
+  .slick-dots li button:before {
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  .slick-arrow {
+    z-index: 1;
+  }
 `;
 
-export const CardImage = styled.img`
+export const CarouselImage = styled.img`
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 `;
 

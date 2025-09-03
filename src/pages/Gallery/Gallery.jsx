@@ -1,53 +1,77 @@
 import React from "react";
+import Slider from "react-slick";
 import {
   Section,
   Title,
   Subtitle,
   Grid,
   Card,
-  CardImage,
   CardContent,
   CardCategory,
-  CardTitle
+  CardTitle,
+  CarouselImage
 } from "./styles";
 
 export default function Gallery() {
   const galleryItems = [
     {
-      image: "/assets/gallery/car1.jpg",
+      images: [
+        "/assets/gallery/car1-1.jpg",
+        "/assets/gallery/car1-2.jpg",
+        "/assets/gallery/car1-3.jpg"
+      ],
       category: "Customização",
       title: "Instalação de escape esportivo"
     },
     {
-      image: "/assets/gallery/car2.jpg",
+      images: [
+        "/assets/gallery/car2-1.jpg",
+        "/assets/gallery/car2-2.jpg",
+        "/assets/gallery/car2-3.jpg"
+      ],
       category: "Manutenção",
       title: "Revisão completa"
     },
     {
-      image: "/assets/gallery/car3.jpg",
+      images: [
+        "/assets/gallery/car3-1.jpg",
+        "/assets/gallery/car3-2.jpg"
+      ],
       category: "Performance",
       title: "Upgrade de suspensão"
     },
     {
-      image: "/assets/gallery/car4.jpg",
+      images: [
+        "/assets/gallery/car4-1.jpg",
+        "/assets/gallery/car4-2.jpg",
+        "/assets/gallery/car4-3.jpg"
+      ],
       category: "Elétrica",
       title: "Sistema de som instalado"
     },
-    {
-      image: "/assets/gallery/car5.jpg",
-      category: "Customização",
-      title: "Pintura e envelopamento"
-    },
   ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true
+  };
 
   return (
     <Section id="gallery">
       <Title>📸 Nossa Galeria</Title>
-      <Subtitle>Alguns dos trabalhos que realizamos com dedicação e qualidade</Subtitle>
+      <Subtitle>Veja nossos serviços realizados com qualidade e atenção aos detalhes</Subtitle>
       <Grid>
         {galleryItems.map((item, index) => (
           <Card key={index}>
-            <CardImage src={item.image} alt={item.title} />
+            <Slider {...settings}>
+              {item.images.map((img, idx) => (
+                <CarouselImage key={idx} src={img} alt={item.title} />
+              ))}
+            </Slider>
             <CardContent>
               <CardCategory>{item.category}</CardCategory>
               <CardTitle>{item.title}</CardTitle>
