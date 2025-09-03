@@ -7,7 +7,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <HeaderContainer>
-      <Logo href="#home">Oficina<span>Pro</span></Logo>
+      <Logo href="#home"><span>EastSiders</span></Logo>
 
       <Nav className={open ? "open" : ""}>
       <NavList>

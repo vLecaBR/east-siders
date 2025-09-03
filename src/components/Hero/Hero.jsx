@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <HeroWrap id="home">
       <Left>
-        <Title>OficinaPro — serviço que dá moral no rolê</Title>
+        <Title>EastSiders</Title>
         <Subtitle>
           Manutenção, revisão completa e customizações com qualidade e transparência. Atendimento rápido e garantia.
         </Subtitle>
