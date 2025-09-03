@@ -4,6 +4,9 @@ import App from "./App";
 import GlobalStyle from "./styles/globalStyles";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 createRoot(document.getElementById("root")).render(
   <ThemeProvider theme={theme}>
