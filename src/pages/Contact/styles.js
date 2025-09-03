@@ -1,81 +1,133 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+/* Section Geral */
 export const Section = styled.section`
-  padding: 80px 24px;
+  position: relative;
   background: ${({ theme }) => theme.colors.bg};
-  text-align: center;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
-export const Title = styled.h2`
-  font-size: 2.25rem;
-  margin-bottom: 12px;
+/* Hero Banner */
+export const Hero = styled.div`
+  width: 100%;
+  height: 20vh;
+  background: url("/assets/contact/banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+  }
+`;
+
+export const HeroContent = styled.div`
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  max-width: 900px;
+  padding: 0 24px;
+`;
+
+export const HeroTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
   background: ${({ theme }) => theme.colors.gradient};
   background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
 
-export const Subtitle = styled.p`
-  color: ${({ theme }) => theme.colors.textMuted};
-  max-width: 720px;
-  margin: 0 auto 40px;
-  font-size: 1.05rem;
+export const HeroSubtitle = styled.p`
+  font-size: 1.2rem;
+  color: #fff;
 `;
 
-export const ContactGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  margin-bottom: 50px;
+/* Contatos integrados */
+export const ContactInfoWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 24px;
 `;
 
-export const ContactCard = styled.div`
-  background: ${({ theme }) => theme.colors.bgAlt};
-  padding: 24px;
-  border-radius: ${({ theme }) => theme.radius.md};
-  box-shadow: ${({ theme }) => theme.shadow.sm};
+export const InfoItem = styled.a`
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.text};
+  transition: transform 0.3s, color 0.3s;
 
   &:hover {
-    transform: translateY(-6px);
-    box-shadow: ${({ theme }) => theme.shadow.md};
+    transform: translateY(-4px);
+    color: ${({ theme }) => theme.colors.accent};
   }
 
-  a {
-    color: ${({ theme }) => theme.colors.accent};
-    font-weight: 600;
-    text-decoration: none;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
   }
 `;
 
-export const ContactIcon = styled.div`
-  font-size: 2rem;
+export const InfoIcon = styled.div`
+  font-size: 2.5rem;
   color: ${({ theme }) => theme.colors.accent};
 `;
 
-export const ContactInfo = styled.div`
-  text-align: left;
-  p {
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: ${({ theme }) => theme.colors.text};
-  }
-  span {
-    color: ${({ theme }) => theme.colors.textMuted};
-  }
+export const InfoText = styled.div`
+  font-size: 1rem;
+  line-height: 1.4;
 `;
 
+/* Mapa */
 export const MapWrapper = styled.div`
   width: 100%;
+  height: 450px;
   border-radius: ${({ theme }) => theme.radius.md};
   overflow: hidden;
   box-shadow: ${({ theme }) => theme.shadow.md};
+  margin: 0 auto 80px;
 
   iframe {
     width: 100%;
-    height: 450px;
+    height: 100%;
     border: none;
+    filter: grayscale(10%) contrast(95%);
+  }
+`;
+
+/* Floating buttons */
+export const FloatingButtons = styled.div`
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 999;
+`;
+
+export const FloatingButton = styled.a`
+  background: ${({ theme }) => theme.colors.accent};
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: ${({ theme }) => theme.shadow.lg};
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: ${({ theme }) => theme.shadow.xl};
   }
 `;
