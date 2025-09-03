@@ -13,7 +13,7 @@ export default function Header() {
       <NavList>
         <NavItem><Link to="/">Início</Link></NavItem>
         <NavItem><Link to="/servicos">Serviços</Link></NavItem>
-        <NavItem><Link to="/trabalhos">Trabalhos</Link></NavItem>
+        <NavItem><Link to="/galeria">Galeria</Link></NavItem>
         <NavItem><Link to="/sobre">Sobre</Link></NavItem>
         <NavItem><Link to="/contato">Contato</Link></NavItem>
       </NavList>
