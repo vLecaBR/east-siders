@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HeaderContainer, Logo, Nav, NavToggle, NavList, NavItem, CTA } from "./styles";
 import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -9,13 +10,13 @@ export default function Header() {
       <Logo href="#home">Oficina<span>Pro</span></Logo>
 
       <Nav className={open ? "open" : ""}>
-        <NavList>
-          <NavItem><a href="#home">Início</a></NavItem>
-          <NavItem><a href="#services">Serviços</a></NavItem>
-          <NavItem><a href="#works">Trabalhos</a></NavItem>
-          <NavItem><a href="#about">Sobre</a></NavItem>
-          <NavItem><a href="#contact">Contato</a></NavItem>
-        </NavList>
+      <NavList>
+        <NavItem><Link to="/">Início</Link></NavItem>
+        <NavItem><Link to="/servicos">Serviços</Link></NavItem>
+        <NavItem><Link to="/trabalhos">Trabalhos</Link></NavItem>
+        <NavItem><Link to="/sobre">Sobre</Link></NavItem>
+        <NavItem><Link to="/contato">Contato</Link></NavItem>
+      </NavList>
         <CTA href="#contact">Agendar</CTA>
       </Nav>
 

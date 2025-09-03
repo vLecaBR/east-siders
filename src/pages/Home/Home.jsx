@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "../components/Hero/Hero";
-import ServiceCard from "../components/ServiceCard/ServiceCard";
-import WorkCard from "../components/WorkCard/WorkCard";
+import Hero from "../../components/Hero/Hero";
+import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import WorkCard from "../../components/WorkCard/WorkCard";
 import { FaCar, FaOilCan, FaCarSide } from "react-icons/fa";
 
 export default function Home() {
