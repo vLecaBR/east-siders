@@ -54,7 +54,7 @@ export const NavItem = styled.li`
 `;
 
 export const CTA = styled.a`
-  background: linear-gradient(90deg, var(--accent), #ff8a57);
+  background: linear-gradient(135deg, #ff5315ff, #ff8a57);
   color: #071022;
   padding:8px 14px;
   border-radius:10px;
