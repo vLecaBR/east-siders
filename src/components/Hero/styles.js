@@ -50,7 +50,7 @@ export const Actions = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  bottom
+  bottom: 0;
 
   .btn-primary {
     background: var(--accent);
