@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeroWrap = styled.section`
   display: flex;
-  align-items: center;
+  align-items: stretch; /* deixa Left e Right ocuparem altura total */
   justify-content: space-between;
   gap: 32px;
   padding: 64px 24px;
@@ -17,20 +17,21 @@ export const HeroWrap = styled.section`
 `;
 
 export const Left = styled.div`
-  flex: 1;         /* ocupa metade do espaço */
-  width: 100%;     /* garante que preencha no wrap */
+  flex: 1;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Right = styled.div`
-  flex: 1;         /* ocupa metade do espaço */
+  flex: 1;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* conteúdo alinhado à direita */
+  align-items: flex-end; 
   text-align: right;
 
   @media (max-width: 860px) {
-    align-items: flex-start; /* no mobile, conteúdo à esquerda */
+    align-items: flex-start;
     text-align: left;
   }
 `;
@@ -48,9 +49,8 @@ export const Subtitle = styled.p`
 
 export const Actions = styled.div`
   display: flex;
-  align-items: center;
-  gap: 12px;
-  bottom: 0;
+  gap: 5px;
+  margin-top: 200px; /* <<< isso empurra os botões pro fim da coluna */
 
   .btn-primary {
     background: var(--accent);
