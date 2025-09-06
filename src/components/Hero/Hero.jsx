@@ -13,6 +13,8 @@ export default function Hero() {
         </Actions>
       </Left>
 
+{/* Right com título, subtítulo e botões */}
+
       <Right>
         <Title>EastSiders</Title>
         <Subtitle>
