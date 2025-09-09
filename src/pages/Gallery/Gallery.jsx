@@ -63,7 +63,7 @@ export default function Gallery() {
   return (
     <Section id="gallery">
       <Title>📸 Nossa Galeria</Title>
-      <Subtitle>Veja nossos serviços realizados com qualidade e atenção aos detalhes</Subtitle>
+      <Subtitle>Veja nossos serviços realizados com qualidade e atenção aos detalhes.</Subtitle>
       <Grid>
         {galleryItems.map((item, index) => (
           <Card key={index}>
