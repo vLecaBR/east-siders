@@ -7,10 +7,7 @@ export default function Hero() {
     <HeroWrap id="home">
       {/* Left mantido vazio por enquanto */}
       <Left >
-        <Actions>
-          <a href="#services" className="btn-ghost">Ver serviços</a>
-          <a href="#contact" className="btn-ghost">Falar com a gente</a>
-        </Actions>
+
       </Left>
 
 {/* Right com título, subtítulo e botões */}
@@ -20,6 +17,10 @@ export default function Hero() {
         <Subtitle>
           Manutenção, revisão completa e customizações com qualidade e transparência. Atendimento rápido e garantia.
         </Subtitle>
+            <Actions>
+          <a href="#services" className="btn-ghost">Ver serviços</a>
+          <a href="#contact" className="btn-ghost">Falar com a gente</a>
+            </Actions>
 
       </Right>
     </HeroWrap>

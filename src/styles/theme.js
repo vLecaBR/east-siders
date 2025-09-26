@@ -1,7 +1,7 @@
 const theme = {
   colors: {
-    bg: "#0d1117",
-    bgAlt: "#161b22",
+    bg: "#0e131aff",
+    bgAlt: "rgba(62, 86, 119, 0.41)",
     accent: "#ff6b35",
     accentAlt: "#ff8a57",
     text: "#f0f6fc",

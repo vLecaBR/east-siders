@@ -1,93 +1,68 @@
 import React from "react";
-import Hero from "../../components/Hero/Hero";
-import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import WorkCard from "../../components/WorkCard/WorkCard";
-import { FaCar, FaOilCan, FaCarSide } from "react-icons/fa";
 import {
-  Section,
-  SectionAlt,
+  Container,
+  Hero,
+  HeroContent,
   Title,
   Subtitle,
-  Grid,
-  GridWorks,
-  StreetBg,
+  CTAButton,
+  Services,
+  ServiceCard,
+  ServiceIcon,
+  ServiceTitle,
+  ServiceDesc,
+  Overlay,
 } from "./styles";
 
-export default function Home() {
-  const services = [
-    {
-      icon: <FaCar />,
-      title: "Revisão Completa",
-      desc: "Troca de óleo, filtros, verificação de freios e suspensão.",
-    },
-    {
-      icon: <FaOilCan />,
-      title: "Troca de Óleo",
-      desc: "Óleos e filtros de qualidade com acompanhamento técnico.",
-    },
-    {
-      icon: <FaCarSide />,
-      title: "Custom & Performance",
-      desc: "Melhorias, instalação de peças e ajustes de performance.",
-    },
-  ];
+import { FaTools, FaCarSide, FaCogs } from "react-icons/fa";
 
-  const works = [
-    {
-      image: "/assets/work1.jpg",
-      title: "Instalação de escape",
-      desc: "Ajuste e solda, final polido",
-      tags: ["escape", "solda"],
-    },
-    {
-      image: "/assets/work2.jpg",
-      title: "Revisão completa",
-      desc: "Cliente satisfeito",
-      tags: ["revisão", "freios"],
-    },
-    {
-      image: "/assets/work3.jpg",
-      title: "Alinhamento e balanceamento",
-      desc: "Correção de vibração",
-      tags: ["alinhamento"],
-    },
-  ];
-
+const Home = () => {
   return (
-    <>
-      <Hero />
-
-      <StreetBg>
-        <Section id="services">
-          <Title>🚗 Serviços de Qualidade</Title>
-          <Subtitle>Cuidamos do seu carro como se fosse nosso!</Subtitle>
-          <Grid>
-            {services.map((s) => (
-              <ServiceCard key={s.title} {...s} />
-            ))}
-          </Grid>
-        </Section>
-      </StreetBg>
-
-      <SectionAlt id="works">
-        <Title>🔧 Trabalhos Realizados</Title>
-        <Subtitle>Alguns projetos que já passaram pela nossa oficina</Subtitle>
-        <GridWorks>
-          {works.map((w) => (
-            <WorkCard key={w.title} {...w} />
-          ))}
-        </GridWorks>
-      </SectionAlt>
-
-      <StreetBg>
-        <Section id="about">
-          <Title>👨‍🔧 Sobre Nós</Title>
+    <Container>
+      <Hero>
+        <Overlay />
+        <HeroContent>
+          <Title>Leça Motors</Title>
           <Subtitle>
-            Somos apaixonados por carros e especialistas em manutenção. Há mais
-            de 10 anos trazendo confiança e transparência para nossos clientes.
+            Performance, confiança e estilo em cada reparo.
           </Subtitle>
-        </Section>
-      </StreetBg>
-    </>
+          <CTAButton>Agende seu horário</CTAButton>
+        </HeroContent>
+      </Hero>
+
+      <Services>
+        <ServiceCard>
+          <ServiceIcon>
+            <FaTools />
+          </ServiceIcon>
+          <ServiceTitle>Manutenção Completa</ServiceTitle>
+          <ServiceDesc>
+            Do motor à estética, cuidamos de cada detalhe do seu carro.
+          </ServiceDesc>
+        </ServiceCard>
+
+        <ServiceCard>
+          <ServiceIcon>
+            <FaCarSide />
+          </ServiceIcon>
+          <ServiceTitle>Diagnóstico Avançado</ServiceTitle>
+          <ServiceDesc>
+            Tecnologia de ponta para identificar e resolver problemas rápido.
+          </ServiceDesc>
+        </ServiceCard>
+
+        <ServiceCard>
+          <ServiceIcon>
+            <FaCogs />
+          </ServiceIcon>
+          <ServiceTitle>Peças Originais</ServiceTitle>
+          <ServiceDesc>
+            Garantia de qualidade e durabilidade para o seu veículo.
+          </ServiceDesc>
+        </ServiceCard>
+      </Services>
+    </Container>
   );
-}
+};
+
+export default Home;

@@ -50,7 +50,7 @@ export const Subtitle = styled.p`
 export const Actions = styled.div`
   display: flex;
   gap: 5px;
-  margin-top: 200px; /* <<< isso empurra os botões pro fim da coluna */
+  margin-top: 0px; /* <<< isso empurra os botões pro fim da coluna */
 
   .btn-primary {
     background: var(--accent);

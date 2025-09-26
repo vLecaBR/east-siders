@@ -1,74 +1,121 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-export const Section = styled.section`
-  text-align: center;
-  background: rgba(15, 15, 15, 0.95);
-  padding: 80px 24px;
-  border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
-export const SectionAlt = styled.section`
-  text-align: center;
-  background: #111;
-  padding: 80px 24px;
-  border-top: 3px solid #c1272d;
-  border-bottom: 3px solid #c1272d;
+export const Container = styled.div`
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: #0a0a0a;
+  overflow-x: hidden;
 `;
 
-export const Title = styled.h2`
-  font-size: 2.4rem;
-  margin-bottom: 16px;
-  font-family: "Bebas Neue", sans-serif;
-  text-transform: uppercase;
-  color: #f1f1f1;
+export const Hero = styled.section`
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1515923163041-fd0bf2eb0f38")
+    no-repeat center/cover;
   position: relative;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 12px;
-    background: url("/assets/spray-brush.png") repeat-x;
-    background-size: contain;
-    opacity: 0.8;
+export const Overlay = styled.div`
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+`;
+
+export const HeroContent = styled.div`
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  animation: ${fadeInUp} 1.2s ease-out;
+`;
+
+export const Title = styled.h1`
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #ffbb00, #ff3c00);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
   }
 `;
 
 export const Subtitle = styled.p`
-  color: #ccc;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e0e0e0;
+`;
+
+export const CTAButton = styled.button`
+  padding: 1rem 2rem;
+  border: none;
+  background: linear-gradient(90deg, #ffbb00, #ff3c00);
+  color: #fff;
   font-size: 1.1rem;
-  max-width: 720px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  font-family: "Roboto Mono", monospace;
-`;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 
-export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-`;
-
-export const GridWorks = styled(Grid)`
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-`;
-
-export const StreetBg = styled.div`
-  background: url("/assets/concrete-texture.jpg") center/cover no-repeat;
-  padding: 40px 0;
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 10, 10, 0.85);
-    z-index: -1;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 100, 0, 0.6);
   }
+`;
+
+export const Services = styled.section`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem 2rem;
+  flex-wrap: wrap;
+  background: #111;
+`;
+
+export const ServiceCard = styled.div`
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(145deg, #1f1f1f, #2b2b2b);
+  }
+`;
+
+export const ServiceIcon = styled.div`
+  font-size: 2.5rem;
+  color: #ffbb00;
+  margin-bottom: 1rem;
+`;
+
+export const ServiceTitle = styled.h3`
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+`;
+
+export const ServiceDesc = styled.p`
+  font-size: 0.95rem;
+  color: #bbb;
 `;
