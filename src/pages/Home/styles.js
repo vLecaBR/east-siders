@@ -52,7 +52,7 @@ export const Title = styled.h1`
     font-size: 2.5rem;
   }
 `;
-
+  
 export const Subtitle = styled.p`
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -75,7 +75,7 @@ export const CTAButton = styled.button`
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(158, 74, 255, 0.71);
+    box-shadow: 0 8px 20px ${({ theme }) => theme.colors.accentAlt};
   }
 `;
 
