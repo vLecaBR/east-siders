@@ -14,14 +14,12 @@ const fadeInUp = keyframes`
 export const Container = styled.div`
   font-family: "Poppins", sans-serif;
   color: #fff;
-  background: #0a0a0a;
   overflow-x: hidden;
 `;
 
 export const Hero = styled.section`
   height: 100vh;
-  background: url("https://images.unsplash.com/photo-1515923163041-fd0bf2eb0f38")
-    no-repeat center/cover;
+  background: ${({ theme }) => theme.colors.bg};
   position: relative;
   display: flex;
   justify-content: center;
@@ -31,7 +29,7 @@ export const Hero = styled.section`
 export const Overlay = styled.div`
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: ${({ theme }) => theme.colors.bg};
 `;
 
 export const HeroContent = styled.div`
@@ -87,7 +85,7 @@ export const Services = styled.section`
   gap: 2rem;
   padding: 6rem 2rem;
   flex-wrap: wrap;
-  background: #111;
+  background: ${({ theme }) => theme.colors.bgAlt};
 `;
 
 export const ServiceCard = styled.div`

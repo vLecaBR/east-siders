@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   align-items:center;
   justify-content:space-between;
   padding:16px 24px;
-  background: linear-gradient(180deg, rgba(6,10,18,0.6), rgba(6,10,18,0.35));
+  background: ${({ theme }) => theme.colors.bg};
   backdrop-filter: blur(6px);
 `;
 

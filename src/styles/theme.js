@@ -1,7 +1,7 @@
 const theme = {
   colors: {
     bg: "#0e131aff",
-    bgAlt: "rgba(62, 86, 119, 0.41)",
+    bgAlt: "rgba(18, 28, 40, 1)",
     accent: "#ff8a57",
     accentAlt: "#ff5315ff",
     text: "#f0f6fc",
@@ -9,6 +9,7 @@ const theme = {
     card: "#1c2128",
     border: "rgba(255,255,255,0.08)",
     gradient: "linear-gradient(135deg, #ff8a57, #ff5315ff)",
+    gradientAlt: "linear-gradient(135deg, #0e131aff, #3e567769)",
   },
   fonts: {
     body: "'Inter', sans-serif",
