@@ -2,13 +2,13 @@ const theme = {
   colors: {
     bg: "#0e131aff",
     bgAlt: "rgba(62, 86, 119, 0.41)",
-    accent: "#ff6b35",
-    accentAlt: "#ff8a57",
+    accent: "#8926faff",
+    accentAlt: "#8926fa49",
     text: "#f0f6fc",
     textMuted: "#8b949e",
     card: "#1c2128",
     border: "rgba(255,255,255,0.08)",
-    gradient: "linear-gradient(135deg, #ff6b35, #ff8a57)",
+    gradient: "linear-gradient(135deg, #8926faff, #8926fa49)",
   },
   fonts: {
     body: "'Inter', sans-serif",
