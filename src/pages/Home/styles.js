@@ -67,7 +67,7 @@ export const Subtitle = styled.p`
 export const CTAButton = styled.button`
   padding: 1rem 2rem;
   border: none;
-  background: linear-gradient(90deg, #8926fa49, #8926faff);
+  background: ${({ theme }) => theme.colors.gradient};
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
@@ -106,7 +106,7 @@ export const ServiceCard = styled.div`
 
 export const ServiceIcon = styled.div`
   font-size: 2.5rem;
-  color: #ffbb00;
+  color: ${({ theme }) => theme.colors.accentAlt};
   margin-bottom: 1rem;
 `;
 
