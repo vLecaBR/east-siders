@@ -46,7 +46,7 @@ export const Title = styled.h1`
   font-weight: 800;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #ffbb00, #ff3c00);
+  background: linear-gradient(90deg, #ffffffff, #6d6d6dff);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -67,7 +67,7 @@ export const Subtitle = styled.p`
 export const CTAButton = styled.button`
   padding: 1rem 2rem;
   border: none;
-  background: linear-gradient(90deg, #ffbb00, #ff3c00);
+  background: linear-gradient(90deg, #8926fa49, #8926faff);
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
@@ -77,7 +77,7 @@ export const CTAButton = styled.button`
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 100, 0, 0.6);
+    box-shadow: 0 8px 20px rgba(158, 74, 255, 0.71);
   }
 `;
 

@@ -22,7 +22,7 @@ const Home = () => {
       <Hero>
         <Overlay />
         <HeroContent>
-          <Title>Leça Motors</Title>
+          <Title>East</Title>
           <Subtitle>
             Performance, confiança e estilo em cada reparo.
           </Subtitle>
